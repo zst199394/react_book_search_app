@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Books from "./pages/Books";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 import './App.css';
 
 function App() {
@@ -12,10 +14,8 @@ function App() {
         <Route exact path={["/", "/books"]}>
           <Books />
         </Route>
-        <Route>
-          <NoMatch />
-        </Route>
       </Switch>
+      <Footer />
     </div>
   </Router>
 
