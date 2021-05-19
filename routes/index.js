@@ -10,8 +10,8 @@ router.post("/api/newbook",function(req,res){
   })
 })
 
-router.get("/api/newbook",function(req,res){
-  db.create(req.body)
+router.get("/api/allbooks",function(req,res){
+  db.find({})
   .then(function(allBook){
     console.log("Get",allBook)
     res.json(allBook)

@@ -8,19 +8,18 @@ class Savedbooks extends React.Component {
         books: []
     }
 
-    componentDidMount = (newbook) => {
-        console.log(newbook);
-        Axios.get("/api/newbook", newbook)
+    componentDidMount (){
+        Axios.get("/api/allbooks")
             .then((response) => {
                 console.log(response)
-            this.setState({books})
+            this.setState({books:response.data})
             })
     }
 
 
     render() {
         return (
-            <div class="container">
+            <div className="container">
                 <div className="jumbotron">
                     {this.state.books.length ? (
                         <List>

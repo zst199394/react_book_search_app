@@ -7,8 +7,8 @@ function Nav() {
         <div className="container-fluid">
           <div className="navbar-brand-icon">
             <img id="logo" alt="logo" src="../book.png" />
-          <h1 className="navbar-brand text-light" href="/"> Googlebook Search</h1>
-          <a href="/savedbooks">Savedbooks</a>
+          <a className="navbar-brand navbar-link text-light" href="/"> Googlebook Search</a>
+          <a className="navbar-link text-warning" href="/savedbooks">Savedbooks</a>
           </div>
         </div>
       </nav>
