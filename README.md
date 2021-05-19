@@ -6,7 +6,7 @@
   ![node.js badge](https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white)  
 
   App: https://reactapp21books.herokuapp.com/
-  ![screenshot](./public/home.png)
+  ![screenshot](./client/public/home.png)
 
   ## Description
   I'll create a new React-based Google Books Search app. Create React components, work with helper/util functions, and utilize React lifecycle methods to query and display books based on user searches. I Use Node, Express and MongoDB so that users can save books to review or purchase later
