@@ -10,6 +10,15 @@ router.post("/api/newbook",function(req,res){
   })
 })
 
+router.get("/api/newbook",function(req,res){
+  db.create(req.body)
+  .then(function(allBook){
+    console.log("Get",allBook)
+    res.json(allBook)
+  })
+})
+
+
 
 // If no API routes are hit, send the React app
 router.use(function(req, res) {
