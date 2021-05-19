@@ -21,13 +21,20 @@ class Books extends React.Component {
            for (let i=0; i<response.data.items.length; i++){
              books.push({
               title: response.data.items[i].volumeInfo.title,
-              author: response.data.items[i].volumeInfo.authors,
+              author: response.data.items[i].volumeInfo.authors[0]||"N/a",
               description:response.data.items[i].volumeInfo.description
              })
            }
            this.setState({books:books})
            console.log(this.state.books,books)
        }) 
+    }
+    saveBook = (newbook)=> {
+      console.log(newbook);
+    Axios.post("/api/newbook",newbook)
+    .then((response) => {
+      console.log(response)
+    })
     }
     render(){
     return(
@@ -58,7 +65,7 @@ class Books extends React.Component {
                     </strong>
                     <h6>Author :by {book.author}</h6>
                     <p>Description : {book.description}</p>
-                    <button className="btn btn-success">Save book</button>
+                    <button className="btn btn-success" onClick={()=>this.saveBook({title:book.title,author:book.author,description:book.description})}>Save book</button>
                 </ListItem>
               ))}
             </List>
