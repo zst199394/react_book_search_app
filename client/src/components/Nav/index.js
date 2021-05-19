@@ -2,11 +2,16 @@ import React from "react";
 
 function Nav() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a className="navbar-brand" href="/">
-        Googlebooks Search
-      </a>
-    </nav>
+    <header>
+      <nav className="navbar-expand-lg navbar navbar-success info bg-success">
+        <div className="container-fluid">
+          <div className="navbar-brand-icon">
+            <img id="logo" alt="logo" src="../book.png" />
+          <h1 className="navbar-brand text-light" href="/"> Googlebook Search</h1>
+          </div>
+        </div>
+      </nav>
+    </header>
   );
 }
 
